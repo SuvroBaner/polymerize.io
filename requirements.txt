@@ -2,3 +2,4 @@ pandas
 dataclass-csv
 matplotlib
 seaborn
+statsmodels
