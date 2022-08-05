@@ -1,2 +1,4 @@
 pandas
 dataclass-csv
+matplotlib
+seaborn
