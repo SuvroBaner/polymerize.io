@@ -3,3 +3,4 @@ dataclass-csv
 matplotlib
 seaborn
 statsmodels
+sklearn
