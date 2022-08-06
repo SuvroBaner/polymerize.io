@@ -99,3 +99,16 @@ Final Results -
 * RMSE: 67.70587955886813
 * R-squared: 0.606423825133415
 
+### Further improvements -
+
+* Auto-correlation of error terms can be checked.
+* Normalizing the inputs 
+* Do more robust feature selection like doing regularization (Ridge Regression using L2 norm and Lasso using L1 norm)
+* Bias Variance trade-off using k-fold cross-validation
+* Bin the response feature into high, medium and low and perform classification task on them
+* Adding non-linearity to the model
+* Using non-parametric methods like Random forst, Boosting and Support Vector Machines
+* Before regression we could do an unsupervised learning and do the feature selection based on that and then regress
+* Finally use a shallow neural network (multi-layer perceptron) to capture the non-linearity and intercation terms and minimize the mean squared error loss function.
+* Can augment the training data using the open-source
+
