@@ -112,3 +112,25 @@ Final Results -
 * Finally use a shallow neural network (multi-layer perceptron) to capture the non-linearity and intercation terms and minimize the mean squared error loss function.
 * Can augment the training data using the open-source
 
+# Exploration and Optimization -
+
+Uniform Distribution of Y "roughness"
+
+Generating the inputs -
+
+Draw random samples from a normal (Gaussian) distribution.
+
+The probability density function of the normal distribution, is often called the bell curve because of its characteristic shape (see the example below).
+
+The normal distributions occurs often in nature. For example, it describes the commonly occurring distribution of samples influenced by a large number of tiny, random disturbances, each with its own unique distribution
+
+The probability density for the Gaussian distribution is
+
+p(x) = (1 / sqrt(2*pi*sigma^2)) * exp^(-(x - mu)^2 / 2*sigma^2)
+
+where  is the mean and  the standard deviation. The square of the standard deviation, , is called the variance.
+
+The function has its peak at the mean, and its “spread” increases with the standard deviation (the function reaches 0.607 times its maximum at  and  [2]). This implies that normal is more likely to return samples lying close to the mean, rather than those far away.
+
+The generateDistribution() would be used to generate the input space of features which will be used to regress the "Roughness" for which we already have a model trained. You can think of these as partial derivaties and if you sum them up, it gives you the value of the Total Derivatives. Higher the total derivative, higher the final value of roughness. We come to this step where internally the Mean Squared Error Loss function is optimized.
+
