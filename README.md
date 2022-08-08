@@ -43,10 +43,11 @@ curl -X 'POST' \
 
 Request Body :
 
-{
+```{
   "num_points": 100,
   "response_bin": "low"
 }
+```
 
 Note - 
 
