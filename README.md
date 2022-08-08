@@ -5,9 +5,11 @@
 pip install virtualenv
 
 python -m venv polymerize_env
+
 polymerize_env\Scripts\activate
 
 git clone git@github.com:SuvroBaner/polymerize.io.git
+
 cd polymerize.io
 
 pip install -r requirements.txt
@@ -37,6 +39,8 @@ curl -X 'POST' \
   "response_bin": "low"
 }'
 
+## Request & Response
+
 Request Body :
 
 {
@@ -44,15 +48,16 @@ Request Body :
   "response_bin": "low"
 }
 
-**Note: **
+Note - 
 
 "num_points" - > integer. PLease provide the number of observations you want to generate
+
 "response_bin" - > The values are either "low", "medium" or "high"
 
 
 Sample Response -
 
-{
+```{
   "status": true,
   "message": "The response is successful",
   "input_samplespace": {
@@ -85,7 +90,7 @@ Sample Response -
     66.03547674472648,
     159.45610735551273
   ]
-}
+}```
 
 
 ## Descriptive Statistical Insights -
