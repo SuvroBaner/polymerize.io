@@ -1,5 +1,93 @@
 # polymerize.io
 
+## Set-up your environment (Windows)
+
+pip install virtualenv
+
+python -m venv polymerize_env
+polymerize_env\Scripts\activate
+
+git clone git@github.com:SuvroBaner/polymerize.io.git
+cd polymerize.io
+
+pip install -r requirements.txt
+
+## Run the application
+
+Fom the root folder (polymerize.io) run the below command-
+
+uvicorn app.main:app --reload
+
+## Use Swagger (Open API) docs to send request -
+
+http://127.0.0.1:8000/v1/polymerize_predict/docs
+
+Request URL:
+
+http://127.0.0.1:8000/v1/polymerize_predict/predict_roughness?api_key=1234
+
+Curl :
+
+curl -X 'POST' \
+  'http://127.0.0.1:8000/v1/polymerize_predict/predict_roughness?api_key=1234' \
+  -H 'accept: application/json' \
+  -H 'Content-Type: application/json' \
+  -d '{
+  "num_points": 100,
+  "response_bin": "low"
+}'
+
+Request Body :
+
+{
+  "num_points": 100,
+  "response_bin": "low"
+}
+
+**Note: **
+
+"num_points" - > integer. PLease provide the number of observations you want to generate
+"response_bin" - > The values are either "low", "medium" or "high"
+
+
+Sample Response -
+
+{
+  "status": true,
+  "message": "The response is successful",
+  "input_samplespace": {
+    "layer_height": [
+      0.007881018603815931,
+      0.05643405486620378
+    ],
+    "wall_thickness": [
+      2.0977267155834642,
+      6.939230263133773
+    ],
+    "infill_density": [
+      48.945156479585066,
+      87.39971635095745
+    ],
+    "print_speed": [
+      88.40959678745978,
+      125.64716524863368
+    ],
+    "infill_pattern_honeycomb": [
+      1.0010004457205604,
+      0.6345485272789351
+    ],
+    "material_pla": [
+      0.13466285924421406,
+      -0.0780016608201401
+    ]
+  },
+  "predictions": [
+    66.03547674472648,
+    159.45610735551273
+  ]
+}
+
+
 ## Descriptive Statistical Insights -
 A good start is to look at some descriptive statistics -
 
