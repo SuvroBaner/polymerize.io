@@ -43,7 +43,8 @@ curl -X 'POST' \
 
 Request Body :
 
-```{
+```
+{
   "num_points": 100,
   "response_bin": "low"
 }
@@ -58,7 +59,8 @@ Note -
 
 Sample Response -
 
-```{
+```
+{
   "status": true,
   "message": "The response is successful",
   "input_samplespace": {
