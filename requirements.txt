@@ -4,3 +4,5 @@ matplotlib
 seaborn
 statsmodels
 sklearn
+uvicorn
+fastapi
