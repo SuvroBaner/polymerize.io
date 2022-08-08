@@ -28,7 +28,7 @@ from app.routers import polymerize_predict_router
 
 _LOG_FILE = 'application.log'
 
-logger = get_logger(name = 'app_log', filename = _LOG_FILE)
+logger = get_logger(name = 'app_log', filename = _LOG_FILE, write_file = False)
 
 # This will be the main point of interaction to create all your API.
 app = FastAPI()
@@ -64,10 +64,10 @@ async def add_process_time_header(request: Request, call_next):
 async def healthcheck():
     return {"status": "alive"}
 
-# subapi = FastAPI()
-# subapi.include_router(polymerize_predict_router.router)
-# app.mount("/v1/polymerize_predict", subapi)
-# logger.info("Main app initialized for the service")
+subapi = FastAPI()
+subapi.include_router(polymerize_predict_router.router)
+app.mount("/v1/polymerize_predict", subapi)
+logger.info("Main app initialized for the service")
 
 if __name__ == '__main__':
     pass
