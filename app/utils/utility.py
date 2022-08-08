@@ -6,6 +6,7 @@ __version__ = '0.1'
 __author__ = 'suvrobaner@gmail.com'
 
 import pickle
+import pandas as pd
 
 def writeToPickle(obj, filename):
     with open(filename, 'wb') as file:
@@ -23,3 +24,6 @@ def searchStringInDictKeys(obj, text):
         if text in k:
             result.append(k)
     return result
+
+def createDataLoader(input_data_dictionary):
+    return pd.DataFrame(input_data_dictionary)

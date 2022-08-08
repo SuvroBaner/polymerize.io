@@ -26,12 +26,12 @@ def generateInputDistribution(num_points, y_bin, target):
             start = int(app_config[target][interval])
         elif 'end' in interval:
             end = int(app_config[target][interval])
-    
+
     final_distribution = {}
     for variable, metrics in distribution_stats[y_bin].items():
         mu = metrics[0]
         sigma = metrics[1]
         s = np.random.normal(mu, sigma, num_points)
-        final_distribution[variable] = s
+        final_distribution[variable] = s.tolist()
     
     return final_distribution
