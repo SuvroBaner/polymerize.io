@@ -1,0 +1,11 @@
+roughness:
+  'low_start': 21
+  'low_end': 121
+  'medium_start': 126
+  'medium_end': 192
+  'high_start': 200
+  'high_end': 360
+models:
+  'linear_regression_model': 'app\resources\models\linear_regression_final.pkl'
+stats:
+  'input_distribution': 'app\resources\distribution_meta\distribution_stats.pkl'

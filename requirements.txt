@@ -6,3 +6,4 @@ statsmodels
 sklearn
 uvicorn
 fastapi
+pyyaml

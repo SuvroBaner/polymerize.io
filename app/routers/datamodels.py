@@ -9,4 +9,4 @@ from pydantic import BaseModel
 
 class InputRequest(BaseModel):
     num_points: int
-    response_value: int
+    response_bin: str

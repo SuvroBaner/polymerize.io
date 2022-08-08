@@ -73,4 +73,5 @@ if __name__ == '__main__':
     pass
 # uvicorn app.main:app --reload
 # http://127.0.0.1:8000/docs
+# http://127.0.0.1:8000/v1/polymerize_predict/docs
 
